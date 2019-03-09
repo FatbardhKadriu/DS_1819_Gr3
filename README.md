@@ -2,6 +2,6 @@
 Projekti nga lenda Siguria e te dhenave
 
 Anetaret:
-Fatbardh Gashi
-Eduard Spahija
-Fatbardh Kadriu
+Fatbardh Gashi,
+Eduard Spahija,
+Fatbardh Kadriu.
