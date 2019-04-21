@@ -59,7 +59,8 @@ namespace BookCipher
         }
         static void Main(string[] args)
         {
-            String plaintext = "This is a book";
+            Console.Write("Plaintext : ");
+            String plaintext = Console.ReadLine();
             String ciphertext = Encrypt(plaintext, readFile(textFile));
             String plaintextAgain = Decrypt(ciphertext, readFile(textFile));
             Console.WriteLine("Clear Text : " + plaintext);
