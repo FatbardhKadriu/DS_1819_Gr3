@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
 
 namespace BookCipher
 {   
@@ -20,6 +22,33 @@ namespace BookCipher
                 return txt;
             }
             return "Fajlli nuk ekziston\n";
+        }
+
+        static readonly string PDFFile = @"C:\Users\eduar\Desktop\FK\Semestri 4\Rrjetet Kompjuterike\pdfFile.pdf";
+
+        public static string GetText(string filePath)
+        {
+            var sb = new StringBuilder();
+            try
+            {
+                using (PdfReader reader = new PdfReader(filePath))
+                {
+                    string prevPage = "";
+                    for (int page = 1; page <= reader.NumberOfPages; page++)
+                    {
+                        ITextExtractionStrategy its = new SimpleTextExtractionStrategy();
+                        var s = PdfTextExtractor.GetTextFromPage(reader, page, its);
+                        if (prevPage != s) sb.Append(s);
+                        prevPage = s;
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return sb.ToString();
         }
         static string Encrypt(string plaintext, string book)
         {
@@ -61,11 +90,12 @@ namespace BookCipher
         {
             Console.Write("Plaintext : ");
             String plaintext = Console.ReadLine();
-            String ciphertext = Encrypt(plaintext, readFile(textFile));
-            String plaintextAgain = Decrypt(ciphertext, readFile(textFile));
+            String ciphertext = Encrypt(plaintext, GetText(PDFFile));
+            String plaintextAgain = Decrypt(ciphertext, GetText(PDFFile));
             Console.WriteLine("Clear Text : " + plaintext);
             Console.WriteLine("CipherText : " + ciphertext);
-            Console.WriteLine("Clear Text Again : " + plaintextAgain); 
+            Console.WriteLine("Clear Text Again : " + plaintextAgain);
+            Console.ReadLine();
         }
     }
 }
