@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-using System.IO;//vyn per me lexu te fajlli .txt
+using System.IO;
 
 
 
@@ -43,43 +43,43 @@ namespace BookCipher
 
         public static string GetText(string filePath)
         {
-            /*Nese deshirojme ta marrim permbajtjen prej nje fajlli .txt 
-            static readonly string textFile = @"C:\Users\Bardhi\Desktop\libri\bardhi.txt";
-            public static string readFile(string textFile)
+            string ext = System.IO.Path.GetExtension(filePath);
+
+            if (ext.ToLower() == ".pdf")
             {
-                if (File.Exists(textFile))
+                var sb = new StringBuilder();
+                try
                 {
-                    string txt = File.ReadAllText(textFile);
-                    return txt;
-                }
-                return "Fajlli nuk ekziston\n";
-            }*/
-            var sb = new StringBuilder();
-            try
-            {
-                using (PdfReader reader = new PdfReader(filePath))
-                {
-                    string prevPage = "";
-                    for (int page = 1; page <= reader.NumberOfPages; page++)
+                    using (PdfReader reader = new PdfReader(filePath))
                     {
-                        ITextExtractionStrategy its = new SimpleTextExtractionStrategy();
-                        var s = PdfTextExtractor.GetTextFromPage(reader, page, its);
-                        if (prevPage != s) sb.Append(s);
-                        prevPage = s;
+                        string prevPage = "";
+                        for (int page = 1; page <= reader.NumberOfPages; page++)
+                        {
+                            ITextExtractionStrategy its = new SimpleTextExtractionStrategy();
+                            var s = PdfTextExtractor.GetTextFromPage(reader, page, its);
+                            if (prevPage != s) sb.Append(s);
+                            prevPage = s;
+                        }
+                        reader.Close();
                     }
-                    reader.Close();
                 }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Ju lutem zgjedhni fajllin per enkriptim.", "Vërejtje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                return sb.ToString();
             }
-            catch (Exception e)
+
+            else
             {
-                throw e;
+                string txt = File.ReadAllText(filePath);
+                return txt;
             }
-            return sb.ToString();
         }
         private string Encrypt(string plaintext, string book)
         {
-            string[] wordArray = book.Split(' ');
-            string[] plainTextArray = plaintext.Split(' ');
+            string[] wordArray = book.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.None);
+            string[] plainTextArray = plaintext.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.None);
             string cipherText = "";
             try
             {
@@ -133,24 +133,10 @@ namespace BookCipher
             txtDecryptedText.Text = DecryptedTexti;
         }
 
-        private void TxtBookCipher_TextChanged(object sender, EventArgs e)
+        private void txtPlainText_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void TxtPlainText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblBookCipher_Click(object sender, EventArgs e)
-        {
-
+            txtEncryptedText.Text = "";
+            txtDecryptedText.Text = "";
         }
     }
 }
