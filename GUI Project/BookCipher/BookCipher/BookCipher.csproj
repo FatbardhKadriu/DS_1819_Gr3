@@ -85,10 +85,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\book.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="pictures\CloseImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecureData.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -52,34 +52,44 @@
             // 
             // txtBookCipher
             // 
+            this.txtBookCipher.BackColor = System.Drawing.Color.Maroon;
             this.txtBookCipher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookCipher.ForeColor = System.Drawing.Color.White;
             this.txtBookCipher.Location = new System.Drawing.Point(17, 49);
             this.txtBookCipher.Name = "txtBookCipher";
             this.txtBookCipher.Size = new System.Drawing.Size(885, 30);
             this.txtBookCipher.TabIndex = 0;
+            this.txtBookCipher.TextChanged += new System.EventHandler(this.TxtBookCipher_TextChanged);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Lime;
             this.button1.Location = new System.Drawing.Point(910, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "Zgjedh pdf fajllin";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPlainText
             // 
+            this.txtPlainText.BackColor = System.Drawing.Color.Maroon;
             this.txtPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlainText.ForeColor = System.Drawing.Color.White;
             this.txtPlainText.Location = new System.Drawing.Point(17, 135);
             this.txtPlainText.Name = "txtPlainText";
             this.txtPlainText.Size = new System.Drawing.Size(1084, 30);
             this.txtPlainText.TabIndex = 2;
+            this.txtPlainText.TextChanged += new System.EventHandler(this.TxtPlainText_TextChanged);
             // 
             // txtEncryptedText
             // 
+            this.txtEncryptedText.BackColor = System.Drawing.Color.Maroon;
             this.txtEncryptedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEncryptedText.ForeColor = System.Drawing.Color.Lime;
             this.txtEncryptedText.Location = new System.Drawing.Point(17, 250);
             this.txtEncryptedText.Name = "txtEncryptedText";
             this.txtEncryptedText.Size = new System.Drawing.Size(1084, 30);
@@ -87,19 +97,21 @@
             // 
             // btnEncrypt
             // 
+            this.btnEncrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.btnEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEncrypt.Location = new System.Drawing.Point(910, 183);
+            this.btnEncrypt.Location = new System.Drawing.Point(910, 185);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(191, 34);
             this.btnEncrypt.TabIndex = 5;
             this.btnEncrypt.Text = "Enkripto";
-            this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.UseVisualStyleBackColor = false;
             this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // lblPlainText
             // 
             this.lblPlainText.AutoSize = true;
             this.lblPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlainText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.lblPlainText.Location = new System.Drawing.Point(17, 107);
             this.lblPlainText.Name = "lblPlainText";
             this.lblPlainText.Size = new System.Drawing.Size(99, 25);
@@ -108,18 +120,21 @@
             // 
             // btnDecrypt
             // 
+            this.btnDecrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.btnDecrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecrypt.Location = new System.Drawing.Point(910, 298);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(191, 34);
             this.btnDecrypt.TabIndex = 7;
             this.btnDecrypt.Text = "Dekripto";
-            this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.UseVisualStyleBackColor = false;
             this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // txtDecryptedText
             // 
+            this.txtDecryptedText.BackColor = System.Drawing.Color.Maroon;
             this.txtDecryptedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDecryptedText.ForeColor = System.Drawing.Color.White;
             this.txtDecryptedText.Location = new System.Drawing.Point(17, 366);
             this.txtDecryptedText.Name = "txtDecryptedText";
             this.txtDecryptedText.Size = new System.Drawing.Size(1084, 30);
@@ -129,16 +144,19 @@
             // 
             this.lblBookCipher.AutoSize = true;
             this.lblBookCipher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookCipher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.lblBookCipher.Location = new System.Drawing.Point(17, 21);
             this.lblBookCipher.Name = "lblBookCipher";
             this.lblBookCipher.Size = new System.Drawing.Size(333, 25);
             this.lblBookCipher.TabIndex = 10;
             this.lblBookCipher.Text = "PDF fajlli për enkriptim të Plain Text-it";
+            this.lblBookCipher.Click += new System.EventHandler(this.LblBookCipher_Click);
             // 
             // lblEncryptedText
             // 
             this.lblEncryptedText.AutoSize = true;
             this.lblEncryptedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncryptedText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.lblEncryptedText.Location = new System.Drawing.Point(17, 222);
             this.lblEncryptedText.Name = "lblEncryptedText";
             this.lblEncryptedText.Size = new System.Drawing.Size(285, 25);
@@ -149,6 +167,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.label1.Location = new System.Drawing.Point(17, 329);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(317, 25);
@@ -157,6 +176,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
@@ -166,13 +186,14 @@
             this.btnClose.Size = new System.Drawing.Size(191, 34);
             this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Dalja";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1123, 477);
             this.Controls.Add(this.label1);
@@ -187,11 +208,13 @@
             this.Controls.Add(this.txtPlainText);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBookCipher);
+            this.ForeColor = System.Drawing.Color.Lime;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Enkriptimi dhe dekriptimi me metoden Book Cipher";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

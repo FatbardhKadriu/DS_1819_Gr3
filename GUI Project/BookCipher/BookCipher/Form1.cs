@@ -24,6 +24,7 @@ namespace BookCipher
         public Form1()
         {
             InitializeComponent();
+            this.BackgroundImage = Properties.Resources.SecureData;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -118,6 +119,26 @@ namespace BookCipher
         {
             DecryptedTexti = Decrypt(EncryptedTexti, GetText(bookCipherPDFFileName));
             txtDecryptedText.Text = DecryptedTexti;
+        }
+
+        private void TxtBookCipher_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtPlainText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblBookCipher_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
