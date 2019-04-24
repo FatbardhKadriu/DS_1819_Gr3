@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
+using System.IO;//vyn per me lexu te fajlli .txt
 
 
 
@@ -42,6 +43,17 @@ namespace BookCipher
 
         public static string GetText(string filePath)
         {
+            /*Nese deshirojme ta marrim permbajtjen prej nje fajlli .txt 
+            static readonly string textFile = @"C:\Users\Bardhi\Desktop\libri\bardhi.txt";
+            public static string readFile(string textFile)
+            {
+                if (File.Exists(textFile))
+                {
+                    string txt = File.ReadAllText(textFile);
+                    return txt;
+                }
+                return "Fajlli nuk ekziston\n";
+            }*/
             var sb = new StringBuilder();
             try
             {
