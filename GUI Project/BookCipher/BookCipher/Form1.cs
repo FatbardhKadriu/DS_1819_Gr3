@@ -78,8 +78,8 @@ namespace BookCipher
         }
         private string Encrypt(string plaintext, string book)
         {
-            string[] wordArray = book.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.None);
-            string[] plainTextArray = plaintext.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.None);
+            string[] wordArray = book.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.RemoveEmptyEntries);
+            string[] plainTextArray = plaintext.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.RemoveEmptyEntries);
             string cipherText = "";
             try
             {
