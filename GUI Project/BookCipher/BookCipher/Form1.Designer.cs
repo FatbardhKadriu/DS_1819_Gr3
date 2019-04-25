@@ -52,7 +52,7 @@
             // 
             // txtBookCipher
             // 
-            this.txtBookCipher.BackColor = System.Drawing.Color.Maroon;
+            this.txtBookCipher.BackColor = System.Drawing.Color.DarkSlateGray;
             this.txtBookCipher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookCipher.ForeColor = System.Drawing.Color.White;
             this.txtBookCipher.Location = new System.Drawing.Point(17, 49);
@@ -63,9 +63,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Lime;
+            this.button1.ForeColor = System.Drawing.Color.Lavender;
             this.button1.Location = new System.Drawing.Point(880, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 34);
@@ -76,7 +76,7 @@
             // 
             // txtPlainText
             // 
-            this.txtPlainText.BackColor = System.Drawing.Color.Maroon;
+            this.txtPlainText.BackColor = System.Drawing.Color.DarkSlateGray;
             this.txtPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlainText.ForeColor = System.Drawing.Color.White;
             this.txtPlainText.Location = new System.Drawing.Point(17, 135);
@@ -88,7 +88,7 @@
             // 
             // txtEncryptedText
             // 
-            this.txtEncryptedText.BackColor = System.Drawing.Color.Maroon;
+            this.txtEncryptedText.BackColor = System.Drawing.Color.DarkSlateGray;
             this.txtEncryptedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEncryptedText.ForeColor = System.Drawing.Color.Lime;
             this.txtEncryptedText.Location = new System.Drawing.Point(17, 292);
@@ -98,8 +98,9 @@
             // 
             // btnEncrypt
             // 
-            this.btnEncrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.btnEncrypt.BackColor = System.Drawing.Color.DimGray;
             this.btnEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEncrypt.ForeColor = System.Drawing.Color.Lavender;
             this.btnEncrypt.Location = new System.Drawing.Point(880, 219);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(221, 34);
@@ -112,7 +113,7 @@
             // 
             this.lblPlainText.AutoSize = true;
             this.lblPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlainText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.lblPlainText.ForeColor = System.Drawing.Color.Lavender;
             this.lblPlainText.Location = new System.Drawing.Point(17, 107);
             this.lblPlainText.Name = "lblPlainText";
             this.lblPlainText.Size = new System.Drawing.Size(99, 25);
@@ -121,8 +122,9 @@
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.btnDecrypt.BackColor = System.Drawing.Color.DimGray;
             this.btnDecrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecrypt.ForeColor = System.Drawing.Color.Lavender;
             this.btnDecrypt.Location = new System.Drawing.Point(880, 334);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(221, 34);
@@ -133,7 +135,7 @@
             // 
             // txtDecryptedText
             // 
-            this.txtDecryptedText.BackColor = System.Drawing.Color.Maroon;
+            this.txtDecryptedText.BackColor = System.Drawing.Color.DarkSlateGray;
             this.txtDecryptedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDecryptedText.ForeColor = System.Drawing.Color.White;
             this.txtDecryptedText.Location = new System.Drawing.Point(17, 408);
@@ -145,7 +147,7 @@
             // 
             this.lblBookCipher.AutoSize = true;
             this.lblBookCipher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookCipher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.lblBookCipher.ForeColor = System.Drawing.Color.Lavender;
             this.lblBookCipher.Location = new System.Drawing.Point(17, 21);
             this.lblBookCipher.Name = "lblBookCipher";
             this.lblBookCipher.Size = new System.Drawing.Size(388, 25);
@@ -156,8 +158,8 @@
             // 
             this.lblEncryptedText.AutoSize = true;
             this.lblEncryptedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEncryptedText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.lblEncryptedText.Location = new System.Drawing.Point(17, 264);
+            this.lblEncryptedText.ForeColor = System.Drawing.Color.Lavender;
+            this.lblEncryptedText.Location = new System.Drawing.Point(17, 255);
             this.lblEncryptedText.Name = "lblEncryptedText";
             this.lblEncryptedText.Size = new System.Drawing.Size(285, 25);
             this.lblEncryptedText.TabIndex = 11;
@@ -167,7 +169,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.label1.ForeColor = System.Drawing.Color.Lavender;
             this.label1.Location = new System.Drawing.Point(17, 371);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(317, 25);
@@ -176,9 +178,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.btnClose.BackColor = System.Drawing.Color.DimGray;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Lavender;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(880, 476);
