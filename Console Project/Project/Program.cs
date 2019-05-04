@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
+using System.IO;
 
 namespace BookCipher
 {   
@@ -24,7 +27,7 @@ namespace BookCipher
             return "Fajlli nuk ekziston\n";
         }
 
-        static readonly string PDFFile = @"C:\Users\eduar\Desktop\FK\Semestri 4\Rrjetet Kompjuterike\pdfFile.pdf";
+        static readonly string PDFFile = @"C:\Users\Bardhi\Desktop\libri\HCI.pdf";
 
         public static string GetText(string filePath)
         {
@@ -52,22 +55,28 @@ namespace BookCipher
         }
         static string Encrypt(string plaintext, string book)
         {
-            string[] wordArray = book.Split(' ');
-            string[] plainTextArray = plaintext.Split(' ');
+            string[] wordArray = book.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.None);
+            string[] plainTextArray = plaintext.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.None);
             string cipherText = "";
-            for (int i = 0; i < plainTextArray.Length; i++)
+            try
             {
-                string word = plainTextArray[i];
-                int index = Array.IndexOf(wordArray, word);
-                if (index < 0)
+                for (int i = 0; i < plainTextArray.Length; i++)
                 {
-                    throw new Exception();
+                    string word = plainTextArray[i];
+                    int index = Array.IndexOf(wordArray, word);
+                    if (index < 0)
+                    {
+                        throw new Exception();
+                    }
+
+                    cipherText += index + 1;
+                    cipherText += " ";
                 }
-
-                cipherText += index + 1;
-                cipherText += " ";
             }
-
+            catch (Exception)
+            {
+                throw new Exception("Nuk mund te enkriptohet ky mesazh.\nProvoni nje tjeter!");
+            }
             return cipherText.TrimEnd();
         }
         static string Decrypt(string ciphertext, string book)
@@ -88,14 +97,37 @@ namespace BookCipher
         }
         static void Main(string[] args)
         {
-            Console.Write("Plaintext : ");
-            String plaintext = Console.ReadLine();
-            String ciphertext = Encrypt(plaintext, GetText(PDFFile));
-            String plaintextAgain = Decrypt(ciphertext, GetText(PDFFile));
-            Console.WriteLine("Clear Text : " + plaintext);
-            Console.WriteLine("CipherText : " + ciphertext);
-            Console.WriteLine("Clear Text Again : " + plaintextAgain);
-            Console.ReadLine();
+            Console.Write("Zgjedhni extension-in e fajllit : ");
+            string extension = Console.ReadLine();
+            string plaintext = "";
+            string ciphertext = "";
+            string plaintextAgain = "";
+            adresa:
+            if(extension.ToLower() == "pdf")
+            {
+                Console.Write("Plaintext : ");
+                plaintext = Console.ReadLine();
+                ciphertext = Encrypt(plaintext, GetText(PDFFile));
+                Console.WriteLine("Ciphertext : " + ciphertext);
+         
+            }
+            else if(extension.ToLower() == "txt")
+            {
+                Console.Write("Plaintext : ");
+                plaintext = Console.ReadLine();
+                ciphertext = Encrypt(plaintext, readFile(textFile));
+                Console.WriteLine("Ciphertext : " + ciphertext);
+               
+            }
+            else
+            {
+                Console.WriteLine("Jepni extensionin pdf ose txt!");
+                extension = Console.ReadLine();
+                goto adresa;
+            }
+
+
+            
         }
     }
 }
