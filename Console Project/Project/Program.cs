@@ -27,7 +27,7 @@ namespace BookCipher
             return "Fajlli nuk ekziston\n";
         }
 
-        static readonly string PDFFile = @"C:\Users\Bardhi\Desktop\libri\HCI.pdf";
+        static readonly string PDFFile = @"C:\Users\fatba\OneDrive\Desktop\libri\HCI.pdf";
 
         public static string GetText(string filePath)
         {
@@ -125,9 +125,33 @@ namespace BookCipher
                 extension = Console.ReadLine();
                 goto adresa;
             }
-
-
             
+            Console.WriteLine("A deshironi ta gjeni plaintext-in nga ciphertext-i? y(yes)");
+            string opsioni = Console.ReadLine();
+            if (opsioni == "y")
+            {
+                if (extension.ToLower() == "pdf")
+                {
+                    Console.Write("Ciphertext : ");
+                    ciphertext = Console.ReadLine();
+                    plaintextAgain = Decrypt(ciphertext, GetText(PDFFile));
+                    Console.WriteLine("Plain Text for this cipherText is " + plaintextAgain);
+                }
+                if (extension.ToLower() == "txt")
+                {
+                    Console.Write("Ciphertext : ");
+                    ciphertext = Console.ReadLine();
+                    plaintextAgain = Decrypt(ciphertext, readFile(textFile));
+                    Console.WriteLine("Plaintext for this ciphertext is " + plaintextAgain);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Programi ka perfunduar....");
+            }
+
+
+
         }
     }
 }
