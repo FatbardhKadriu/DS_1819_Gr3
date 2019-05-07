@@ -57,7 +57,8 @@ namespace BookCipher
                         {
                             ITextExtractionStrategy its = new SimpleTextExtractionStrategy();
                             var s = PdfTextExtractor.GetTextFromPage(reader, page, its);
-                            if (prevPage != s) sb.Append(s);
+                            if (prevPage != s) 
+                                sb.Append(s);
                             prevPage = s;
                         }
                         reader.Close();
