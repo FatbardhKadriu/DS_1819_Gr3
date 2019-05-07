@@ -111,7 +111,7 @@ namespace BookCipher
                 .ToArray();
 
             string plaintext = "";
-            string[] wordArray = book.Split(' ');
+            string[] wordArray = book.Split(new[] { Environment.NewLine, " " }, StringSplitOptions.None);
             foreach (int index in indexes)
             {
                 plaintext += wordArray[index] + " ";
