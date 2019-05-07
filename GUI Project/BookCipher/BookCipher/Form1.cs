@@ -120,7 +120,17 @@ namespace BookCipher
         }
 
         private void btnEncrypt_Click(object sender, EventArgs e)
-        {
+        {   
+             if (String.IsNullOrEmpty(txtBookCipher.Text.TrimEnd()))
+            {
+                MessageBox.Show("Duhet të zgjedhni fajllin për enkriptim", "Vërejtje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtPlainText.Text.TrimEnd()))
+            {
+                MessageBox.Show("Ju lutem shënoni plaintext-in për enkriptim!", "Vërejtje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             plainTexti = txtPlainText.Text.TrimEnd();
             bookCipherPDFFileName = txtBookCipher.Text.TrimEnd();
             EncryptedTexti = Encrypt(plainTexti, GetText(bookCipherPDFFileName));
@@ -128,7 +138,19 @@ namespace BookCipher
         }
 
         private void btnDecrypt_Click(object sender, EventArgs e)
-        {
+        {   
+            if (String.IsNullOrEmpty(txtBookCipher.Text.TrimEnd()))
+            {
+                MessageBox.Show("Duhet të zgjedhni fajllin për enkriptim", "Vërejtje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtEncryptedText.Text.TrimEnd()))
+            {
+                MessageBox.Show("Nuk ekziston text-i i enkriptuar!", "Vërejtje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            bookCipherPDFFileName = txtBookCipher.Text.TrimEnd();
+            EncryptedTexti = txtEncryptedText.Text.TrimEnd();
             DecryptedTexti = Decrypt(EncryptedTexti, GetText(bookCipherPDFFileName));
             txtDecryptedText.Text = DecryptedTexti;
         }
