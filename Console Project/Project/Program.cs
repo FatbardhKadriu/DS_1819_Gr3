@@ -27,7 +27,7 @@ namespace BookCipher
             return "Fajlli nuk ekziston\n";
         }
 
-        static readonly string PDFFile = @"C:\Users\fatba\OneDrive\Desktop\libri\HCI.pdf";
+        static readonly string PDFFile = @"C:\Users\Bardhi\Desktop\libri\HCI.pdf";
 
         public static string GetText(string filePath)
         {
