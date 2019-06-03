@@ -1,7 +1,7 @@
 # Siguria2019
-Projekti nga lenda Siguria e te dhenave
+Projektet semestrale nga lënda "Siguria e të dhënave"
 
-Anetaret:
+Anetarët:
 Fatbardh Gashi,
 Eduard Spahija,
 Fatbardh Kadriu.
