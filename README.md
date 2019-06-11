@@ -1,7 +1,7 @@
-# Siguria2019
-Projektet semestrale nga lënda "Siguria e të dhënave"
+# DS_1819_Gr3
+Projektet semestrale nga lÃ«nda "Siguria e tÃ« dhÃ«nave"
 
-Anetarët:
+AnetarÃ«t:
 Fatbardh Gashi,
 Eduard Spahija,
 Fatbardh Kadriu.
