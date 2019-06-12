@@ -4,6 +4,7 @@ Projektet semestrale nga lënda "Siguria e të dhënave"
 Anetarët:
 * Fatbardh Kadriu,
 * Eduard Spahija,
-* Fatbardh Gashi
+* Fatbardh Gashi,
+* Bleona Zenelaj
 
 
