@@ -32,7 +32,7 @@ namespace TCP_Klienti_Eduard
         }
         private void SendDataToServer(string data)
         {
-            server.Send(Encoding.ASCII.GetBytes(data));
+            server.Send(Encoding.ASCII.GetBytes(DES.Encrypt(data)));
         }
 
         private string ReceiveDataFromServer()
