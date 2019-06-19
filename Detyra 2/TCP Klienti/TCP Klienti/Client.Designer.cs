@@ -67,11 +67,12 @@
             // btnConnect
             // 
             this.btnConnect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConnect.BackgroundImage")));
+            this.btnConnect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnConnect.ForeColor = System.Drawing.Color.White;
-            this.btnConnect.Location = new System.Drawing.Point(403, 12);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConnect.Location = new System.Drawing.Point(453, 11);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(100, 27);
+            this.btnConnect.Size = new System.Drawing.Size(112, 34);
             this.btnConnect.TabIndex = 21;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
@@ -79,23 +80,23 @@
             // 
             // txtIP
             // 
-            this.txtIP.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.txtIP.ForeColor = System.Drawing.Color.White;
-            this.txtIP.Location = new System.Drawing.Point(101, 12);
-            this.txtIP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIP.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtIP.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtIP.Location = new System.Drawing.Point(114, 15);
+            this.txtIP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIP.Name = "txtIP";
-            this.txtIP.Size = new System.Drawing.Size(129, 22);
+            this.txtIP.Size = new System.Drawing.Size(145, 26);
             this.txtIP.TabIndex = 20;
             this.txtIP.Text = "127.0.0.1";
             // 
             // txtPorti
             // 
-            this.txtPorti.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.txtPorti.ForeColor = System.Drawing.Color.White;
-            this.txtPorti.Location = new System.Drawing.Point(289, 12);
-            this.txtPorti.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPorti.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtPorti.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtPorti.Location = new System.Drawing.Point(325, 15);
+            this.txtPorti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPorti.Name = "txtPorti";
-            this.txtPorti.Size = new System.Drawing.Size(89, 22);
+            this.txtPorti.Size = new System.Drawing.Size(100, 26);
             this.txtPorti.TabIndex = 17;
             this.txtPorti.Text = "7000";
             // 
@@ -103,11 +104,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(240, 16);
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label4.Location = new System.Drawing.Point(270, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.Size = new System.Drawing.Size(45, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "Porti:";
             // 
@@ -115,11 +116,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(19, 16);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Location = new System.Drawing.Point(21, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 17);
+            this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 18;
             this.label3.Text = "IP Adresa:";
             // 
@@ -127,29 +129,28 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 405);
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Location = new System.Drawing.Point(21, 506);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 17);
+            this.label2.Size = new System.Drawing.Size(183, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Përgjegja nga SERVERI";
             // 
             // txtReceiveAnswer
             // 
-            this.txtReceiveAnswer.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtReceiveAnswer.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtReceiveAnswer.ForeColor = System.Drawing.Color.White;
-            this.txtReceiveAnswer.Location = new System.Drawing.Point(23, 425);
-            this.txtReceiveAnswer.Margin = new System.Windows.Forms.Padding(4);
+            this.txtReceiveAnswer.Location = new System.Drawing.Point(26, 531);
+            this.txtReceiveAnswer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtReceiveAnswer.Multiline = true;
             this.txtReceiveAnswer.Name = "txtReceiveAnswer";
-            this.txtReceiveAnswer.Size = new System.Drawing.Size(792, 83);
+            this.txtReceiveAnswer.Size = new System.Drawing.Size(890, 103);
             this.txtReceiveAnswer.TabIndex = 15;
             // 
             // grbRegjistrimi
             // 
             this.grbRegjistrimi.BackColor = System.Drawing.Color.Transparent;
-            this.grbRegjistrimi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grbRegjistrimi.BackgroundImage")));
             this.grbRegjistrimi.Controls.Add(this.btnSave);
             this.grbRegjistrimi.Controls.Add(this.txtPassword);
             this.grbRegjistrimi.Controls.Add(this.txtUserName);
@@ -163,11 +164,12 @@
             this.grbRegjistrimi.Controls.Add(this.lblTitulli);
             this.grbRegjistrimi.Controls.Add(this.lblEmriMbiemri);
             this.grbRegjistrimi.Controls.Add(this.lblUserName);
-            this.grbRegjistrimi.Location = new System.Drawing.Point(23, 84);
-            this.grbRegjistrimi.Margin = new System.Windows.Forms.Padding(4);
+            this.grbRegjistrimi.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.grbRegjistrimi.Location = new System.Drawing.Point(26, 105);
+            this.grbRegjistrimi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbRegjistrimi.Name = "grbRegjistrimi";
-            this.grbRegjistrimi.Padding = new System.Windows.Forms.Padding(4);
-            this.grbRegjistrimi.Size = new System.Drawing.Size(400, 310);
+            this.grbRegjistrimi.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbRegjistrimi.Size = new System.Drawing.Size(450, 388);
             this.grbRegjistrimi.TabIndex = 22;
             this.grbRegjistrimi.TabStop = false;
             this.grbRegjistrimi.Text = "Regjistrimi i mësimdhënësit";
@@ -176,11 +178,12 @@
             // btnSave
             // 
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(272, 265);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(306, 331);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 28);
+            this.btnSave.Size = new System.Drawing.Size(112, 35);
             this.btnSave.TabIndex = 40;
             this.btnSave.Text = "Ruaje";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -188,75 +191,75 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(111, 222);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(125, 278);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(260, 22);
+            this.txtPassword.Size = new System.Drawing.Size(292, 26);
             this.txtPassword.TabIndex = 39;
             // 
             // txtUserName
             // 
-            this.txtUserName.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtUserName.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtUserName.ForeColor = System.Drawing.Color.White;
-            this.txtUserName.Location = new System.Drawing.Point(111, 185);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName.Location = new System.Drawing.Point(125, 231);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(260, 22);
+            this.txtUserName.Size = new System.Drawing.Size(292, 26);
             this.txtUserName.TabIndex = 38;
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(111, 148);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Location = new System.Drawing.Point(125, 185);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(260, 22);
+            this.txtEmail.Size = new System.Drawing.Size(292, 26);
             this.txtEmail.TabIndex = 37;
             // 
             // txtPaga
             // 
-            this.txtPaga.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtPaga.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtPaga.ForeColor = System.Drawing.Color.White;
-            this.txtPaga.Location = new System.Drawing.Point(111, 111);
-            this.txtPaga.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPaga.Location = new System.Drawing.Point(125, 139);
+            this.txtPaga.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPaga.Name = "txtPaga";
-            this.txtPaga.Size = new System.Drawing.Size(260, 22);
+            this.txtPaga.Size = new System.Drawing.Size(292, 26);
             this.txtPaga.TabIndex = 36;
             this.txtPaga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaga_KeyPress);
             // 
             // txtTitulli
             // 
-            this.txtTitulli.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtTitulli.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtTitulli.ForeColor = System.Drawing.Color.White;
-            this.txtTitulli.Location = new System.Drawing.Point(111, 74);
-            this.txtTitulli.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTitulli.Location = new System.Drawing.Point(125, 92);
+            this.txtTitulli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTitulli.Name = "txtTitulli";
-            this.txtTitulli.Size = new System.Drawing.Size(260, 22);
+            this.txtTitulli.Size = new System.Drawing.Size(292, 26);
             this.txtTitulli.TabIndex = 35;
             // 
             // txtEmriMbiemri
             // 
-            this.txtEmriMbiemri.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtEmriMbiemri.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtEmriMbiemri.ForeColor = System.Drawing.Color.White;
-            this.txtEmriMbiemri.Location = new System.Drawing.Point(111, 37);
-            this.txtEmriMbiemri.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmriMbiemri.Location = new System.Drawing.Point(125, 46);
+            this.txtEmriMbiemri.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmriMbiemri.Name = "txtEmriMbiemri";
-            this.txtEmriMbiemri.Size = new System.Drawing.Size(260, 22);
+            this.txtEmriMbiemri.Size = new System.Drawing.Size(292, 26);
             this.txtEmriMbiemri.TabIndex = 34;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(27, 228);
+            this.lblPassword.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPassword.Location = new System.Drawing.Point(30, 285);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(73, 17);
+            this.lblPassword.Size = new System.Drawing.Size(82, 20);
             this.lblPassword.TabIndex = 33;
             this.lblPassword.Text = "Password:";
             // 
@@ -264,11 +267,11 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(8, 149);
+            this.lblEmail.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblEmail.Location = new System.Drawing.Point(9, 186);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(94, 17);
+            this.lblEmail.Size = new System.Drawing.Size(105, 20);
             this.lblEmail.TabIndex = 32;
             this.lblEmail.Text = "Email adresa:";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -277,11 +280,11 @@
             // 
             this.lblPaga.AutoSize = true;
             this.lblPaga.BackColor = System.Drawing.Color.Transparent;
-            this.lblPaga.ForeColor = System.Drawing.Color.White;
-            this.lblPaga.Location = new System.Drawing.Point(55, 112);
+            this.lblPaga.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPaga.Location = new System.Drawing.Point(62, 140);
             this.lblPaga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaga.Name = "lblPaga";
-            this.lblPaga.Size = new System.Drawing.Size(45, 17);
+            this.lblPaga.Size = new System.Drawing.Size(50, 20);
             this.lblPaga.TabIndex = 31;
             this.lblPaga.Text = "Paga:";
             this.lblPaga.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -290,11 +293,11 @@
             // 
             this.lblTitulli.AutoSize = true;
             this.lblTitulli.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulli.ForeColor = System.Drawing.Color.White;
-            this.lblTitulli.Location = new System.Drawing.Point(55, 75);
+            this.lblTitulli.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblTitulli.Location = new System.Drawing.Point(62, 94);
             this.lblTitulli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulli.Name = "lblTitulli";
-            this.lblTitulli.Size = new System.Drawing.Size(45, 17);
+            this.lblTitulli.Size = new System.Drawing.Size(48, 20);
             this.lblTitulli.TabIndex = 30;
             this.lblTitulli.Text = "Titulli:";
             this.lblTitulli.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -303,11 +306,11 @@
             // 
             this.lblEmriMbiemri.AutoSize = true;
             this.lblEmriMbiemri.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmriMbiemri.ForeColor = System.Drawing.Color.White;
-            this.lblEmriMbiemri.Location = new System.Drawing.Point(9, 38);
+            this.lblEmriMbiemri.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblEmriMbiemri.Location = new System.Drawing.Point(10, 48);
             this.lblEmriMbiemri.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmriMbiemri.Name = "lblEmriMbiemri";
-            this.lblEmriMbiemri.Size = new System.Drawing.Size(93, 17);
+            this.lblEmriMbiemri.Size = new System.Drawing.Size(104, 20);
             this.lblEmriMbiemri.TabIndex = 29;
             this.lblEmriMbiemri.Text = "Emri Mbiemri:";
             this.lblEmriMbiemri.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -316,11 +319,11 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(17, 186);
+            this.lblUserName.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUserName.Location = new System.Drawing.Point(19, 232);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(83, 17);
+            this.lblUserName.Size = new System.Drawing.Size(93, 20);
             this.lblUserName.TabIndex = 28;
             this.lblUserName.Text = "User Name:";
             // 
@@ -336,11 +339,12 @@
             this.groupBox2.Controls.Add(this.txtUserName1);
             this.groupBox2.Controls.Add(this.lblPassword1);
             this.groupBox2.Controls.Add(this.lblUserName1);
-            this.groupBox2.Location = new System.Drawing.Point(431, 84);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.groupBox2.Location = new System.Drawing.Point(485, 105);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(345, 310);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(431, 388);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Authentifikimi";
@@ -348,13 +352,13 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(261, 265);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Location = new System.Drawing.Point(292, 331);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 28);
+            this.btnLogin.Size = new System.Drawing.Size(112, 35);
             this.btnLogin.TabIndex = 45;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -362,34 +366,34 @@
             // 
             // txtPassword1
             // 
-            this.txtPassword1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtPassword1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtPassword1.ForeColor = System.Drawing.Color.White;
-            this.txtPassword1.Location = new System.Drawing.Point(100, 166);
-            this.txtPassword1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword1.Location = new System.Drawing.Point(112, 208);
+            this.txtPassword1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword1.Name = "txtPassword1";
             this.txtPassword1.PasswordChar = '*';
-            this.txtPassword1.Size = new System.Drawing.Size(260, 22);
+            this.txtPassword1.Size = new System.Drawing.Size(292, 26);
             this.txtPassword1.TabIndex = 44;
             // 
             // txtUserName1
             // 
-            this.txtUserName1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtUserName1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtUserName1.ForeColor = System.Drawing.Color.White;
-            this.txtUserName1.Location = new System.Drawing.Point(100, 129);
-            this.txtUserName1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName1.Location = new System.Drawing.Point(112, 161);
+            this.txtUserName1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserName1.Name = "txtUserName1";
-            this.txtUserName1.Size = new System.Drawing.Size(260, 22);
+            this.txtUserName1.Size = new System.Drawing.Size(292, 26);
             this.txtUserName1.TabIndex = 43;
             // 
             // lblPassword1
             // 
             this.lblPassword1.AutoSize = true;
             this.lblPassword1.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassword1.ForeColor = System.Drawing.Color.White;
-            this.lblPassword1.Location = new System.Drawing.Point(17, 170);
+            this.lblPassword1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPassword1.Location = new System.Drawing.Point(19, 212);
             this.lblPassword1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword1.Name = "lblPassword1";
-            this.lblPassword1.Size = new System.Drawing.Size(73, 17);
+            this.lblPassword1.Size = new System.Drawing.Size(82, 20);
             this.lblPassword1.TabIndex = 42;
             this.lblPassword1.Text = "Password:";
             // 
@@ -397,21 +401,22 @@
             // 
             this.lblUserName1.AutoSize = true;
             this.lblUserName1.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserName1.ForeColor = System.Drawing.Color.White;
-            this.lblUserName1.Location = new System.Drawing.Point(8, 133);
+            this.lblUserName1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUserName1.Location = new System.Drawing.Point(9, 166);
             this.lblUserName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserName1.Name = "lblUserName1";
-            this.lblUserName1.Size = new System.Drawing.Size(83, 17);
+            this.lblUserName1.Size = new System.Drawing.Size(93, 20);
             this.lblUserName1.TabIndex = 41;
             this.lblUserName1.Text = "User Name:";
             // 
             // Client
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkRed;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(829, 519);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(942, 649);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grbRegjistrimi);
             this.Controls.Add(this.btnConnect);
@@ -421,10 +426,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Coral;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Client";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FIEK-TCP Klienti";
             this.grbRegjistrimi.ResumeLayout(false);
             this.grbRegjistrimi.PerformLayout();
