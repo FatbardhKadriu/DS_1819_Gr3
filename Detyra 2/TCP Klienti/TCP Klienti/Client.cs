@@ -15,6 +15,8 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Web.Script.Serialization;
+using System.Security.Cryptography;
+using System.Xml;
 
 namespace TCP_Klienti_Eduard
 {
@@ -25,6 +27,11 @@ namespace TCP_Klienti_Eduard
         private string IP_Address = "";
         private int PortNo = 0;
         private bool Connected;
+
+        private static RSACryptoServiceProvider rsaClient = new RSACryptoServiceProvider();
+        private static RSACryptoServiceProvider rsaServer = new RSACryptoServiceProvider();
+
+        private static string publicKeyServer;
         public Client()
         {
             InitializeComponent();
@@ -32,12 +39,12 @@ namespace TCP_Klienti_Eduard
         }
         private void SendDataToServer(string data)
         {
-            server.Send(Encoding.ASCII.GetBytes(DES.Encrypt(data)));
+            server.Send(Encoding.ASCII.GetBytes(data));
         }
 
         private string ReceiveDataFromServer()
         {
-            byte[] data = new byte[512];
+            byte[] data = new byte[1024];
             int recv_data = server.Receive(data);
             string stringData = Encoding.ASCII.GetString(data, 0, recv_data);
             receivedData = stringData;
@@ -57,7 +64,7 @@ namespace TCP_Klienti_Eduard
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            byte[] data = new byte[512];
+            byte[] data = new byte[1024];
 
             if (txtIP.Text.Trim() != "" && txtPorti.Text.Trim() != "")
             {
@@ -73,7 +80,11 @@ namespace TCP_Klienti_Eduard
 
                     txtReceiveAnswer.AppendText("Jeni të lidhur me serverin:" + txtIP.Text + " dhe Portin: " + txtPorti.Text + "\n");
                     BWchatLog.RunWorkerAsync();
-                    txtReceiveAnswer.AppendText("\n\n" + ReceiveDataFromServer());
+
+                    publicKeyServer = ReceiveDataFromServer();
+                    txtReceiveAnswer.AppendText("\n\n");
+                    rsaServer.FromXmlString(publicKeyServer);
+
                     Connected = true;
                 }
                 catch (SocketException ex)
@@ -172,7 +183,9 @@ namespace TCP_Klienti_Eduard
                     //string json = js.Serialize(mesimdhenesi); 
 
                     string json = JsonConvert.SerializeObject(mesimdhenesi);
-                    string SendCommand = "Regjistrimi " + json;                    
+                    string SendCommand = "Regjistrimi " + json;
+
+                    SendCommand = DESEncrypt(SendCommand);
                     SendRequestToSrv(SendCommand);
 
                     txtReceiveAnswer.AppendText("\n");
@@ -211,6 +224,8 @@ namespace TCP_Klienti_Eduard
                     login.PasswordHash = txtPassword1.Text.Trim();
                     string json = JsonConvert.SerializeObject(login);
                     string SendCommand = "Authentifikimi " + json;
+
+                    SendCommand = DESEncrypt(SendCommand);
                     SendRequestToSrv(SendCommand);
 
                     txtReceiveAnswer.AppendText("\n");
@@ -224,5 +239,17 @@ namespace TCP_Klienti_Eduard
             }
 
         }
+        string DESEncrypt(string data)
+        {
+            DESCryptoServiceProvider DESalg = new DESCryptoServiceProvider();
+
+            byte[] Data = MyDES.EncryptTextToMemory(data, RSA.RSAEncrypt(DESalg.Key, rsaServer.ExportParameters(false), false), DESalg.IV);
+
+            return Convert.ToBase64String(Data);
+
+            //return Convert.ToBase64String(DESalg.IV+RSA.RSAEncrypt(DESalg.Key, rsaServer.ExportParameters(false), false))+Data);
+
+        }
+
     }
 }
