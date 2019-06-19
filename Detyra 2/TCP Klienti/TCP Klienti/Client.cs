@@ -263,5 +263,14 @@ namespace TCP_Klienti_Eduard
 
         }
 
+        private void GrbRegjistrimi_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
