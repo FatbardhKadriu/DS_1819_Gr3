@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DES.cs" />
+    <Compile Include="RSA.cs" />
     <Compile Include="ConnectionHandler.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Mesimdhenesi.cs" />

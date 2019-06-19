@@ -10,6 +10,8 @@ using System.Collections;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Web.Script.Serialization;
+using System.Security.Cryptography;
+using System.Xml;
 
 namespace Server_TCP
 {
@@ -20,10 +22,14 @@ namespace Server_TCP
         private string eDhenaEardhur;
 
         private  PasswordHash pswhash = new PasswordHash();
+        private static RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+        private static string publicKey = rsa.ToXmlString(false);
+        private static RSAParameters privateKey = rsa.ExportParameters(true);
 
         public ConnectionHandler(Socket klienti)
         {
             this.Klienti = klienti;
+            //ExportPublicRSAKey();
         }
 
         public void HandleConnection()
@@ -74,14 +80,27 @@ namespace Server_TCP
 
         private void SendData(string data)
         {
+            data = DESEncrypt(data);
             this.Klienti.Send(Encoding.ASCII.GetBytes(data));
         }
 
         private string ReceiveData()
         {
-            byte[] data = new byte[512];
+            byte[] data = new byte[1024];
             int recv = this.Klienti.Receive(data);
             string stringData = Encoding.ASCII.GetString(data, 0, recv);
+
+            byte[] RSAkey;
+            byte[] EncryptedData;
+            byte[] IV;
+            byte[] key;
+            string[] stringDataList = stringData.Split('*');
+            IV = Convert.FromBase64String(stringDataList[0]);
+            RSAkey = Convert.FromBase64String(stringDataList[1]);
+            EncryptedData = Convert.FromBase64String(stringDataList[2]);
+            key = RSA.RSADecrypt(RSAkey, privateKey, false);
+            stringData = DES.DecryptTextFromMemory(EncryptedData, key, IV);
+
             eDhenaEardhur = stringData;
             return stringData;
         }
@@ -89,7 +108,7 @@ namespace Server_TCP
         private string DefaultFunctions()
         {
             //string allFunctions = "\nKomandat e mundshme \n(REGJISTRIMI, AUTHENTIFIKIMI)";
-            string allFunctions = "\n";
+            string allFunctions = publicKey;
             return allFunctions;
         }
 
@@ -193,6 +212,12 @@ namespace Server_TCP
 
             return return_value;
         }
-
+        string DESEncrypt(string data)
+        {
+            DESCryptoServiceProvider DESalg = new DESCryptoServiceProvider();
+            byte[] EncryptedData = DES.EncryptTextToMemory(data, DESalg.Key, DESalg.IV);
+            byte[] Key = DESalg.Key;
+            return Convert.ToBase64String(DESalg.IV) + "*" + Convert.ToBase64String(Key) + "*" + Convert.ToBase64String(EncryptedData);
+        }
     }
 }
