@@ -47,6 +47,17 @@ namespace TCP_Klienti_Eduard
             byte[] data = new byte[1024];
             int recv_data = server.Receive(data);
             string stringData = Encoding.ASCII.GetString(data, 0, recv_data);
+
+            byte[] EncryptedData;
+            byte[] IV;
+            byte[] key;
+            string[] stringDataList = stringData.Split('*');
+            IV = Convert.FromBase64String(stringDataList[0]);
+            key = Convert.FromBase64String(stringDataList[1]);
+            EncryptedData = Convert.FromBase64String(stringDataList[2]);
+            stringData = MyDES.DecryptTextFromMemory(EncryptedData, key, IV);
+
+
             receivedData = stringData;
             return stringData;
         }
@@ -243,11 +254,12 @@ namespace TCP_Klienti_Eduard
         {
             DESCryptoServiceProvider DESalg = new DESCryptoServiceProvider();
 
-            byte[] Data = MyDES.EncryptTextToMemory(data, RSA.RSAEncrypt(DESalg.Key, rsaServer.ExportParameters(false), false), DESalg.IV);
+            byte[] EncryptedData = MyDES.EncryptTextToMemory(data, DESalg.Key, DESalg.IV);
 
-            return Convert.ToBase64String(Data);
+            byte[] RSAKey = RSA.RSAEncrypt(DESalg.Key, rsaServer.ExportParameters(false), false);
 
-            //return Convert.ToBase64String(DESalg.IV+RSA.RSAEncrypt(DESalg.Key, rsaServer.ExportParameters(false), false))+Data);
+            return Convert.ToBase64String(DESalg.IV) + "*" + Convert.ToBase64String(RSAKey) + "*" + Convert.ToBase64String(EncryptedData);
+
 
         }
 
