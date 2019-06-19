@@ -20,6 +20,7 @@ namespace Server_TCP
         private Socket Klienti;
         private static int lidhjet = 0;
         private string eDhenaEardhur;
+        private string eDhenaEardhurEnkriptuar;
 
         private  PasswordHash pswhash = new PasswordHash();
         private static RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
@@ -43,7 +44,12 @@ namespace Server_TCP
 
                 while (true)
                 {
-                    Console.WriteLine(ReceiveData());
+                    ReceiveData();
+                    Console.WriteLine("Kerkesa nga klienti e enkriptuar:");
+                    Console.WriteLine(eDhenaEardhurEnkriptuar);
+                    Console.WriteLine("Kerkesa nga klienti e dekriptuar:");
+                    Console.WriteLine(eDhenaEardhur);
+
 
                     if (eDhenaEardhur.ToUpper().StartsWith("REGJISTRIMI") || eDhenaEardhur.ToUpper().StartsWith("AUTHENTIFIKIMI"))
                     {
@@ -89,6 +95,7 @@ namespace Server_TCP
             byte[] data = new byte[1024];
             int recv = this.Klienti.Receive(data);
             string stringData = Encoding.ASCII.GetString(data, 0, recv);
+            eDhenaEardhurEnkriptuar = stringData;
 
             byte[] RSAkey;
             byte[] EncryptedData;
