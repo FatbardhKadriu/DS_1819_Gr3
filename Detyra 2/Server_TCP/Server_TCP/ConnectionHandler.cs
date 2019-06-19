@@ -92,7 +92,7 @@ namespace Server_TCP
 
         private string ReceiveData()
         {
-            byte[] data = new byte[1024];
+            byte[] data = new byte[2048];
             int recv = this.Klienti.Receive(data);
             string stringData = Encoding.ASCII.GetString(data, 0, recv);
             eDhenaEardhurEnkriptuar = stringData;

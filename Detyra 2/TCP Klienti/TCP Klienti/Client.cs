@@ -44,7 +44,7 @@ namespace TCP_Klienti_Eduard
 
         private string ReceiveDataFromServer()
         {
-            byte[] data = new byte[1024];
+            byte[] data = new byte[2048];
             int recv_data = server.Receive(data);
             string stringData = Encoding.ASCII.GetString(data, 0, recv_data);
 
@@ -75,7 +75,7 @@ namespace TCP_Klienti_Eduard
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            byte[] data = new byte[1024];
+            byte[] data = new byte[2048];
 
             if (txtIP.Text.Trim() != "" && txtPorti.Text.Trim() != "")
             {
