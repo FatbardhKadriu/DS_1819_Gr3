@@ -15,7 +15,6 @@ namespace TCP_Klienti
         private static string publicKey = rsa.ToXmlString(false);
         public String verifyToken(string token)
         {
-            const string secret = "GQDstcKsx0NHjPOuXOYg5MbeJ1XT0uFiwDVvVBrk";
             try
             {
                 IJsonSerializer serializer = new JsonNetSerializer();

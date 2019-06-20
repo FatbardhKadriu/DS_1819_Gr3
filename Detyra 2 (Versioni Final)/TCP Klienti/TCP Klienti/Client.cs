@@ -246,7 +246,6 @@ namespace TCP_Klienti
                     string pergjigja = ReceiveDataFromServer();
                     string[] pergjigjaArray = pergjigja.Split('@');
                     tokeni = pergjigjaArray[1];
-                    const string secret = "GQDstcKsx0NHjPOuXOYg5MbeJ1XT0uFiwDVvVBrk";
                     VerifyToken vtoken = new VerifyToken();
 
                     txtReceiveAnswer.AppendText("\n" + pergjigjaArray[0] + "\n" + vtoken.verifyToken(tokeni));
