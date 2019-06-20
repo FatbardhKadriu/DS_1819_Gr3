@@ -92,7 +92,7 @@ namespace Server_TCP
 
         private string ReceiveData()
         {
-            byte[] data = new byte[2048];
+            byte[] data = new byte[4092];
             int recv = this.Klienti.Receive(data);
             string stringData = Encoding.ASCII.GetString(data, 0, recv);
             eDhenaEardhurEnkriptuar = stringData;
@@ -196,9 +196,10 @@ namespace Server_TCP
                     if (item.userId == UserId)
                     {
                         UserExist = true;
+                        Jwt jwt = new Jwt();
                         if (pswhash.ValidatePassword(password, item.PasswordHash))
                         {
-                            return_value = "OK - Jeni autentifikuar me sukses";
+                            return_value = "\nOK - Jeni autentifikuar me sukses \n" + "@" + jwt.createToken(item.userId, item.email, item.emriMbiemri, item.paga, item.titulli);
                         }
                         else
                         {

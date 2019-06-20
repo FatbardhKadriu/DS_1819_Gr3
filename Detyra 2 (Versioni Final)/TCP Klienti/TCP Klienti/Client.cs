@@ -27,6 +27,7 @@ namespace TCP_Klienti
         private string IP_Address = "";
         private int PortNo = 0;
         private bool Connected;
+        public string tokeni;
 
         private static RSACryptoServiceProvider rsaClient = new RSACryptoServiceProvider();
         private static RSACryptoServiceProvider rsaServer = new RSACryptoServiceProvider();
@@ -201,6 +202,7 @@ namespace TCP_Klienti
 
                     txtReceiveAnswer.AppendText("\n");
                     txtReceiveAnswer.Refresh();
+                   
                     txtReceiveAnswer.AppendText("\n" + ReceiveDataFromServer());
                 }
                 catch (Exception ex)
@@ -241,7 +243,13 @@ namespace TCP_Klienti
 
                     txtReceiveAnswer.AppendText("\n");
                     txtReceiveAnswer.Refresh();
-                    txtReceiveAnswer.AppendText("\n" + ReceiveDataFromServer());
+                    string pergjigja = ReceiveDataFromServer();
+                    string[] pergjigjaArray = pergjigja.Split('@');
+                    tokeni = pergjigjaArray[1];
+                    const string secret = "GQDstcKsx0NHjPOuXOYg5MbeJ1XT0uFiwDVvVBrk";
+                    VerifyToken vtoken = new VerifyToken();
+
+                    txtReceiveAnswer.AppendText("\n" + pergjigjaArray[0] + "\n" + vtoken.verifyToken(tokeni));
                 }
                 catch (Exception ex)
                 {
