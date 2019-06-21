@@ -244,11 +244,20 @@ namespace TCP_Klienti
                     txtReceiveAnswer.AppendText("\n");
                     txtReceiveAnswer.Refresh();
                     string pergjigja = ReceiveDataFromServer();
-                    string[] pergjigjaArray = pergjigja.Split('@');
-                    tokeni = pergjigjaArray[1];
-                    VerifyToken vtoken = new VerifyToken();
 
-                    txtReceiveAnswer.AppendText("\n" + pergjigjaArray[0] + "\n" + vtoken.verifyToken(tokeni));
+                    if (pergjigja.Contains('@'))
+                    {
+                        string[] pergjigjaArray = pergjigja.Split('@');
+                        tokeni = pergjigjaArray[1];
+                        VerifyToken vtoken = new VerifyToken();
+
+                        txtReceiveAnswer.AppendText("\n" + pergjigjaArray[0] + "\n" + vtoken.verifyToken(tokeni));
+                    }
+                    else
+                    {
+                        txtReceiveAnswer.AppendText("\n" + pergjigja + "\n" );
+                    }
+                           
                 }
                 catch (Exception ex)
                 {
